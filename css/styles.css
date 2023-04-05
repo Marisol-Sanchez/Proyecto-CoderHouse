@@ -12,11 +12,6 @@ header{
 li{list-style-type:none;display:inline;padding: 70px;}
 a{text-decoration:none ;font-size:20px; color: black;} 
 
-.redes{
-    display:flex;
-    justify-content: space-around;
-    align-items: baseline;
-}
 
 .img-fluid{width:100%;height: auto;}
 
@@ -37,7 +32,7 @@ a{text-decoration:none ;font-size:20px; color: black;}
     padding-right: 70px;
 
 }
-.txtTitulo{
+.txtTituloCentrado{
     text-align: center;
 }
 
@@ -54,15 +49,15 @@ a{text-decoration:none ;font-size:20px; color: black;}
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-    "contenedor contenedor"
-    "txtClases txtClases"
+    "imgPrincipal imgPrincipal"
+    "txtTituloCentrado txtTituloCentrado"
     "txtIntroClases txtIntroClases"
     "imgNatacion txtNatacion"
     "imgWaterpolo txtWaterpolo"
     "imgSincro txtSincro"
 }
-.contenedor{grid-area: contenedor;}
-.txtClases{grid-area:txtClases;}
+.imgPrincipal{grid-area: imgPrincipal;}
+.txtTituloCentrado{grid-area:txtTituloCentrado;}
 .txtIntroClases{grid-area:txtIntroClases;}
 .imgNatacion{grid-area: imgNatacion;}
 .txtNatacion{grid-area: txtNatacion;}  
@@ -73,30 +68,11 @@ a{text-decoration:none ;font-size:20px; color: black;}
 .itemsNatacion{grid-area: itemsNatacion;}
 
 
-.contenedor{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-.centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
+b{display: list-item;list-style-type:circle;
 }
 
 
-.txtClases{
-    text-align: center;
-}
-
-b{display: list-item;list-style-type:circle;text-align: left;
-}
-
-
-
-/* LOGROS */
+/* ---- LOGROS ----- */
  
 .gridNadadora{
     display: grid;
@@ -120,18 +96,13 @@ b{display: list-item;list-style-type:circle;text-align: left;
 .segInfo{grid-area: segInfo;}
 .imgNadador{grid-area: imgNadador;}
 
-
 .txtEnd{
     text-align: end;
 }
 
 
-/* INDUMENTARIA */
 
-.txtInd{
-    /* background-color: lightblue; */
-    text-align: center;
-}
+/* ----- INDUMENTARIA ----- */
 
 .bC{
     background-color: darkgrey;
@@ -169,9 +140,7 @@ b{display: list-item;list-style-type:circle;text-align: left;
 
 
 
-
-
-/* CONTACTO */
+/* ----- CONTACTO ----- */
 
 .txtContacto{
     text-align: center;
@@ -182,9 +151,14 @@ b{display: list-item;list-style-type:circle;text-align: left;
     text-align: center;
 }
 
+.flexContacto{
+    display: flex;
+    flex-direction: column;
+}
 
 
-/* FOOTER */
+
+/* ----- FOOTER ----- */
 
 .logoFooter{
     text-align: center;
@@ -193,11 +167,23 @@ footer{
     background-color: rgb(62, 189, 231);
 }
 
+.redes{
+    display:flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
 
  /* -----  MOBILE ------  */
 
-/* @media (max-width:768px){
+@media (max-width:768px){
     ul{display: flex;flex-direction: row; justify-content: center;padding-left:0;}
     li{padding:2px;margin:2px;}
-    main, footer, header{display:flex;flex-direction: column;align-items: center;}
-} */
+    header{display:flex;flex-direction: column;align-items: center;}
+    .arreglosHome{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    }
+}
