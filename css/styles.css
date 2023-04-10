@@ -1,189 +1,311 @@
-/* arreglos que afectan a todos los html*/
-
-body{
-    font-family: 'Kanit', sans-serif;
-}
-
-header{
-    background-color: rgb(62, 189, 231);
-    align-items: center; 
-    display:flex; flex-direction:row;
-}    
-li{list-style-type:none;display:inline;padding: 70px;}
-a{text-decoration:none ;font-size:20px; color: black;} 
-
-
+/* general */
+body{font-family: 'Kanit', sans-serif;}
 .img-fluid{width:100%;height: auto;}
-
-.padClases{
-    padding-left: 30px;
-    padding-right: 30px;
+ul{list-style-type: none; align-items: center; 
+    display:flex; flex-direction:row;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;}
+li{padding:20px;margin:20px;}
+a{text-decoration: none;font-size: 19px;color: black;}
+a:hover{font-size: 20px;background-color: lightgray;border-radius: 4px ;transition: all .5s;}
+.bC{background-color: rgb(62, 189, 231);}
+.txtCentrado{
+    text-align: center;
+}
+.logoH{height: 110px;}
+.bcIndu{
+    background-color:lightslategray;
 }
 
-   /* -------  HOME -------- */
+/* DESKTOP  */
+@media (min-width:1024px){
+    .gridHome{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area:footer;}
+
+    .gridMain{
+        display: grid;
+        grid-template-areas: 
+        "imgPrincipal imgPrincipal "
+        "primerTitu primerTitu"
+        "primerTexto primerTexto"
+        "segundoTitu segundoTitu"
+        "segundoTexto segundoTexto";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        text-align: center;
+    }
+    .imgPrincipal{grid-area: imgPrincipal;}
+    .primerTitu{grid-area: primerTitu;}
+    .primerTexto{grid-area: primerTexto;}
+    .segundoTitu{grid-area: segundoTitu;}
+    .segundoTexto{grid-area: segundoTexto;}
     
-.arreglosHome{
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 100px;
-    padding-left: 70px;
-    padding-right: 70px;
+    /* ---- footer ---- */
+    .logoFoo{text-align: center;}
+    .redesFoo{
+        display:flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
 
-}
-.txtTituloCentrado{
-    text-align: center;
-}
+        /* CLASES  */
 
+    .headerLogo{
+        display: flex;
+        justify-content: space-between;
+    }
 
-/* ------ CLASES ------ */
+    .mImg{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    }
 
-.logo{
-    height: 110px;
-}
+    .gridClases{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area:footer;}
 
-
-.gridMainClases{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-    "imgPrincipal imgPrincipal"
-    "txtTituloCentrado txtTituloCentrado"
-    "txtIntroClases txtIntroClases"
-    "imgNatacion txtNatacion"
-    "imgWaterpolo txtWaterpolo"
-    "imgSincro txtSincro"
-}
-.imgPrincipal{grid-area: imgPrincipal;}
-.txtTituloCentrado{grid-area:txtTituloCentrado;}
-.txtIntroClases{grid-area:txtIntroClases;}
-.imgNatacion{grid-area: imgNatacion;}
-.txtNatacion{grid-area: txtNatacion;}  
-.imgWaterpolo{grid-area: imgWaterpolo;}
-.txtWaterpolo{grid-area: txtWaterpolo;}  
-.imgSincro{grid-area: imgSincro;}
-.txtSincro{grid-area: txtSincro;} 
-.itemsNatacion{grid-area: itemsNatacion;}
-
-
-b{display: list-item;list-style-type:circle;
-}
-
-
-/* ---- LOGROS ----- */
- 
-.gridNadadora{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "imgNadadora primerInfo";
-    justify-items: center;
+    .gridMainClases{
+        display: grid;
+        grid-template-areas: 
+        "imgPrincipal imgPrincipal"
+        "titClases titClases"
+        "introClases introClases"
+        "imgNatacion natacion"
+        "imgWp waterpolo"
+        "imgNadoSincro nadoSincro";
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto auto;
     
+    }
+    .imgPrincipal{grid-area: imgPrincipal;}
+    .titClases{grid-area: titClases;}
+    .introClases{grid-area: introClases;}
+    .imgNatacion{grid-area: imgNatacion;}
+    .natacion{grid-area: natacion;}
+    .imgWp{grid-area: imgWp;}
+    .waterpolo{grid-area: waterpolo;}
+    .imgNadoSincro{grid-area: imgNadoSincro;}
+    .nadoSincro{grid-area: nadoSincro;}
+
+                 /* LOGROS */
+
+    .txtEnd{
+        text-align: end;
+    }
+
+    .gridClases{
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area:footer;}
+
+    .gridMainLogros{
+        display: grid;
+        grid-template-areas: 
+        "imgPrincipal imgPrincipal"
+        "titLogros titLogros"
+        "introLogros introLogros"
+        "gridNadadora gridNadadora";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+
+    }
+    .imgPrincipal{grid-area: imgPrincipal;}
+    .titLogros{grid-area: titLogros;}
+    .introLogros{grid-area: introLogros;}
+    .gridNadadora{grid-area: gridNadadora;}
+    
+    .gridNadadora{
+        display: grid;
+        grid-template-areas: 
+        "imgNadadora primerInfo";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+    .imgNadadora{grid-area: imgNadadora;}
+    .primerInfo{grid-area: primerInfo;}
+
+    .gridNadador{
+        display: grid;
+        grid-template-areas:
+        "segInfo imgNadador";
+        grid-template-columns: 70% 30%;
+        grid-template-rows: auto auto;
+        justify-items: center;
+    }
+    .segInfo{grid-area: segInfo;}
+    .imgNadador{grid-area: imgNadador;}
+
+    .txtEnd{
+        text-align: end;}
+     
+            /* INDUMENTARIA */
+
+    .gridIndumentaria{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area:footer;}
+
+    .gridMallas{
+        display: grid;
+        grid-template-areas: 
+        "mNegra mAzul mColors mCamufla";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto; 
+        align-items: center;
+    }
+    .txtMallas{grid-area: txtMallas;}
+    .mNegra{grid-area: mNegra;}
+    .mAzul{grid-area: mAzul;}
+    .mColors{grid-area: mColors;}
+    .mCamufla{grid-area: mCamufla;}
+
+    .gridAcces{
+        display: grid;
+        grid-template-areas:
+        "antipBlue antipBla gorroWhi gorroBla";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto; 
+        align-items: center;
+    }
+    
+    .txtAcces{grid-area: txtAcces;}
+    .antipBlue{grid-area: antipBlue;}
+    .antipBla{grid-area: antipBla;}
+    .gorroWhi{grid-area: gorroWhi;}
+    .gorroBla{grid-area: gorroBla;}
+
+
+
+    /* CONTACTO */
+    .formContacto{
+        margin-left: 350px;
+        margin-right: 350px;
+        margin-bottom: 10px;
+        border:4px solid black; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+
 }
-.gridNadador{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "segInfo imgNadador";
-    justify-items: center;
-}
-.primerInfo{grid-area: primerInfo;}
-.imgNadadora{grid-area: imgNadadora;}
-.segInfo{grid-area: segInfo;}
-.imgNadador{grid-area: imgNadador;}
-
-.txtEnd{
-    text-align: end;
-}
-
-
-
-/* ----- INDUMENTARIA ----- */
-
-.bC{
-    background-color: darkgrey;
-}
-
-.gridMallas{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "mNegra mAzul mColors mCamufla";
-    justify-items: center;
-    align-items: center;
-}
-.mNegra{grid-area: mNegra;}
-.mAzul{grid-area: mAzul;}
-.mColors{grid-area: mColors;}
-.mCamufla{grid-area: mCamufla;}
-
-.gridAcces{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "antipBlue antipBla gorroWhi gorroBla";
-    justify-items: center;
-    align-items: center;
-}
-
-.antipBlue{grid-area: antipBlue;}
-.antipBla{grid-area: antipBla;}
-.gorroWhi{grid-area: gorroWhi;}
-.gorroBla{grid-area: gorroBla;}
 
 
 
 
-/* ----- CONTACTO ----- */
 
-.txtContacto{
-    text-align: center;
-}
-.formContacto{
-    border:4px solid black; 
-    margin: 20px;
-    text-align: center;
-}
 
-.flexContacto{
+
+
+/* TABLET */
+@media (min-width:769px) and (max-width:1023px){
+    .headerLogo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul{display: flex;flex-direction: row; justify-content: center;padding-left:0;}
+    li{padding:2px;}
+    footer{display:flex;flex-direction: column;align-items: center;}
+    .logoFoo{
     display: flex;
-    flex-direction: column;
-}
-
-
-
-/* ----- FOOTER ----- */
-
-.logoFooter{
+    flex-direction: column; 
+    align-items: center;
     text-align: center;
+    padding-bottom: 10px;}
+    .redesFoo{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+    .gridMallas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .gridAcces{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .formContacto{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border:4px solid black; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+    
 }
-footer{
-    background-color: rgb(62, 189, 231);
-}
-
-.redes{
-    display:flex;
-    justify-content: space-around;
-    align-items: baseline;
-}
 
 
- /* -----  MOBILE ------  */
-
+/* MOBILE */
 @media (max-width:768px){
     ul{display: flex;flex-direction: row; justify-content: center;padding-left:0;}
-    li{padding:2px;margin:2px;}
-    header{display:flex;flex-direction: column;align-items: center;}
-    .arreglosHome{
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    li{padding:2px; margin:0;}  
+    footer{display:flex;flex-direction: column;align-items: center;}
+    a{font-size: 15px;}
+    .logoFoo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
     }
+    .headerLogo{display:flex;flex-direction: column;align-items: center;}
+
+    .gridMallas{
+        display: flex;
+        align-items: center;
+    }
+    .gridAcces{
+        display: flex;
+        align-items: center;
+    }
+    .formContacto{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border:4px solid black; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+
 }
